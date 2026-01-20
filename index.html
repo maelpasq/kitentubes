@@ -92,7 +92,7 @@
       .reveal-once.is-visible {
         opacity: 1;
         transform: translateY(0);
-        transition: opacity 0.7s ease, transform 0.7s ease;
+        transition: opacity 0.4s ease, transform 0.4s ease;
       }
     </style>
   </head>
@@ -102,7 +102,7 @@
       <div class="pointer-events-none absolute top-1/3 -left-32 h-80 w-80 rounded-full bg-[#c8e7e5] opacity-60 blur-3xl"></div>
 
       <header class="relative z-10">
-        <nav class="fixed top-0 left-0 right-0 z-50">
+        <nav class="fixed top-0 left-0 right-0 z-[999] bg-white/95 backdrop-blur">
           <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
             <div class="text-lg font-semibold tracking-tight">KIT en TUBES</div>
             <div class="hidden items-center gap-8 text-sm font-medium md:flex">
@@ -118,7 +118,7 @@
               Lancer le projet
             </a>
           </div>
-          <div class="border-t border-[#0f1d2d]/10 bg-white/70 backdrop-blur">
+          <div class="border-t border-[#0f1d2d]/10 bg-white/95">
             <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-2 text-[11px] uppercase tracking-[0.3em] text-[#0f1d2d]/60">
               <span>GPAO KIT en TUBES</span>
               <span>Planification 2024</span>
@@ -426,10 +426,10 @@
             }
           });
         },
-        { threshold: 0.2 }
+        { threshold: 0.15 }
       );
       revealItems.forEach((item, index) => {
-        item.style.transitionDelay = `${index * 80}ms`;
+        item.style.transitionDelay = `${index * 40}ms`;
         observer.observe(item);
       });
     </script>
