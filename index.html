@@ -18,91 +18,14 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Spectral:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <style>
-      :root {
-        --ink: #0f1d2d;
-        --sand: #f7f3ee;
-        --clay: #f1e3d1;
-        --teal: #0e6f6d;
-        --amber: #d97735;
-      }
-      body {
-        font-family: "Space Grotesk", sans-serif;
-        color: var(--ink);
-        background: radial-gradient(circle at 10% 10%, #fff8ef 0%, #f7f3ee 35%, #f1e8dc 100%);
-      }
-      .serif {
-        font-family: "Spectral", serif;
-      }
-      .glass {
-        background: rgba(255, 255, 255, 0.7);
-        border: 1px solid rgba(15, 29, 45, 0.08);
-        box-shadow: 0 24px 50px -40px rgba(15, 29, 45, 0.6);
-        backdrop-filter: blur(8px);
-      }
-      .grid-pattern {
-        background-image: linear-gradient(rgba(15, 29, 45, 0.06) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(15, 29, 45, 0.06) 1px, transparent 1px);
-        background-size: 24px 24px;
-      }
-      @keyframes float {
-        0% {
-          transform: translateY(0px);
-        }
-        50% {
-          transform: translateY(-8px);
-        }
-        100% {
-          transform: translateY(0px);
-        }
-      }
-      .float {
-        animation: float 7s ease-in-out infinite;
-      }
-      .reveal {
-        animation: fadeUp 0.9s ease both;
-      }
-      @keyframes fadeUp {
-        0% {
-          opacity: 0;
-          transform: translateY(18px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      .page-enter {
-        animation: pageEnter 1.1s ease both;
-      }
-      @keyframes pageEnter {
-        0% {
-          opacity: 0;
-          transform: translateY(10px) scale(0.985);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0) scale(1);
-        }
-      }
-      .reveal-once {
-        opacity: 0;
-        transform: translateY(16px);
-      }
-      .reveal-once.is-visible {
-        opacity: 1;
-        transform: translateY(0);
-        transition: opacity 0.4s ease, transform 0.4s ease;
-      }
-    </style>
   </head>
-  <body class="min-h-screen">
+  <body class="min-h-screen bg-[radial-gradient(circle_at_10%_10%,#fff8ef_0%,#f7f3ee_35%,#f1e8dc_100%)] font-['Space_Grotesk'] text-[#0f1d2d]">
     <div class="relative overflow-hidden">
       <div class="pointer-events-none absolute -top-20 -right-40 h-96 w-96 rounded-full bg-[#f8dcc5] opacity-70 blur-3xl"></div>
       <div class="pointer-events-none absolute top-1/3 -left-32 h-80 w-80 rounded-full bg-[#c8e7e5] opacity-60 blur-3xl"></div>
 
       <header class="relative z-10">
-        <nav class="fixed top-0 left-0 right-0 z-[999] bg-white/95 backdrop-blur">
+        <nav class="fixed top-0 left-0 right-0 z-[9999] bg-[radial-gradient(circle_at_10%_10%,#fff8ef_0%,#f7f3ee_35%,#f1e8dc_100%)]">
           <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
             <div class="text-lg font-semibold tracking-tight">KIT en TUBES</div>
             <div class="hidden items-center gap-8 text-sm font-medium md:flex">
@@ -118,7 +41,7 @@
               Lancer le projet
             </a>
           </div>
-          <div class="border-t border-[#0f1d2d]/10 bg-white/95">
+          <div class="border-t border-[#0f1d2d]/10">
             <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-2 text-[11px] uppercase tracking-[0.3em] text-[#0f1d2d]/60">
               <span>GPAO KIT en TUBES</span>
               <span>Planification 2024</span>
@@ -126,8 +49,8 @@
           </div>
         </nav>
 
-        <section class="page-enter mx-auto grid max-w-6xl items-center gap-12 px-6 pb-20 pt-32 md:grid-cols-[1.2fr_0.8fr]">
-          <div class="space-y-6 reveal-once" data-reveal>
+        <section class="mx-auto grid max-w-6xl items-center gap-12 px-6 pb-20 pt-32 md:grid-cols-[1.2fr_0.8fr]">
+          <div class="space-y-6 opacity-0 translate-y-4 transition-all duration-300 ease-out" data-reveal>
             <p class="text-xs font-semibold uppercase tracking-[0.4em] text-[#0e6f6d]">
               GPAO 2024 - Vision industrielle
             </p>
@@ -168,8 +91,8 @@
             </div>
           </div>
 
-          <div class="relative reveal-once" data-reveal>
-            <div class="grid-pattern rounded-3xl border border-[#0f1d2d]/10 bg-white/70 p-8 shadow-xl">
+          <div class="relative opacity-0 translate-y-4 transition-all duration-300 ease-out" data-reveal>
+            <div class="rounded-3xl border border-[#0f1d2d]/10 bg-[linear-gradient(rgba(15,29,45,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(15,29,45,0.06)_1px,transparent_1px)] bg-[size:24px_24px] bg-white/70 p-8 shadow-xl">
               <div class="space-y-6">
                 <div class="flex items-center justify-between">
                   <span class="text-xs font-semibold uppercase tracking-[0.3em] text-[#d97735]">
@@ -201,7 +124,7 @@
                 </div>
               </div>
             </div>
-            <div class="float absolute -bottom-6 -left-6 hidden rounded-2xl bg-white/80 p-4 shadow-lg md:block">
+            <div class="absolute -bottom-6 -left-6 hidden animate-pulse rounded-2xl bg-white/80 p-4 shadow-lg md:block">
               <p class="text-xs uppercase tracking-[0.2em] text-[#0e6f6d]">KPI Qualite</p>
               <p class="text-xl font-semibold">96.6% conforme</p>
             </div>
@@ -212,28 +135,28 @@
       <main class="relative z-10 space-y-24 pb-24">
         <section id="objectifs" class="mx-auto max-w-6xl px-6">
           <div class="grid items-start gap-10 md:grid-cols-[0.6fr_1fr]">
-            <div class="space-y-4 reveal-once" data-reveal>
+            <div class="space-y-4 opacity-0 translate-y-4 transition-all duration-300 ease-out" data-reveal>
               <p class="text-xs font-semibold uppercase tracking-[0.4em] text-[#0e6f6d]">Objectifs</p>
               <h2 class="text-3xl font-semibold tracking-tight">Cap sur une production lisible.</h2>
-              <p class="serif text-base text-[#0f1d2d]/70">
+              <p class="text-base text-[#0f1d2d]/70 font-['Spectral']">
                 Le projet vise a fiabiliser les donnees, renforcer la visibilite des stocks et proposer
                 des indicateurs accessibles a tous les ateliers.
               </p>
             </div>
             <div class="grid gap-6 md:grid-cols-2">
-              <div class="glass rounded-3xl p-6 reveal-once" data-reveal>
+              <div class="rounded-3xl border border-[#0f1d2d]/10 bg-white/70 p-6 shadow-xl shadow-[#0f1d2d]/10 backdrop-blur opacity-0 translate-y-4 transition-all duration-300 ease-out" data-reveal>
                 <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#d97735]">Fiabilite</p>
                 <p class="mt-3 text-lg font-semibold">Statistiques production et qualite fiables.</p>
               </div>
-              <div class="glass rounded-3xl p-6 reveal-once" data-reveal>
+              <div class="rounded-3xl border border-[#0f1d2d]/10 bg-white/70 p-6 shadow-xl shadow-[#0f1d2d]/10 backdrop-blur opacity-0 translate-y-4 transition-all duration-300 ease-out" data-reveal>
                 <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#d97735]">Stocks</p>
                 <p class="mt-3 text-lg font-semibold">Vision claire pour reduire les ruptures.</p>
               </div>
-              <div class="glass rounded-3xl p-6 reveal-once" data-reveal>
+              <div class="rounded-3xl border border-[#0f1d2d]/10 bg-white/70 p-6 shadow-xl shadow-[#0f1d2d]/10 backdrop-blur opacity-0 translate-y-4 transition-all duration-300 ease-out" data-reveal>
                 <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#d97735]">Securite</p>
                 <p class="mt-3 text-lg font-semibold">Donnees sensibles protegees.</p>
               </div>
-              <div class="glass rounded-3xl p-6 reveal-once" data-reveal>
+              <div class="rounded-3xl border border-[#0f1d2d]/10 bg-white/70 p-6 shadow-xl shadow-[#0f1d2d]/10 backdrop-blur opacity-0 translate-y-4 transition-all duration-300 ease-out" data-reveal>
                 <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#d97735]">Simplicite</p>
                 <p class="mt-3 text-lg font-semibold">Interface rapide a prendre en main.</p>
               </div>
@@ -242,7 +165,7 @@
         </section>
 
         <section id="fonctions" class="mx-auto max-w-6xl px-6">
-          <div class="flex flex-wrap items-end justify-between gap-6 reveal-once" data-reveal>
+          <div class="flex flex-wrap items-end justify-between gap-6 opacity-0 translate-y-4 transition-all duration-300 ease-out" data-reveal>
             <div>
               <p class="text-xs font-semibold uppercase tracking-[0.4em] text-[#0e6f6d]">Perimetre</p>
               <h2 class="text-3xl font-semibold tracking-tight">Fonctions cles de la GPAO.</h2>
@@ -252,42 +175,42 @@
             </div>
           </div>
           <div class="mt-10 grid gap-6 lg:grid-cols-3">
-            <div class="glass rounded-3xl p-6 reveal-once" data-reveal>
+            <div class="rounded-3xl border border-[#0f1d2d]/10 bg-white/70 p-6 shadow-xl shadow-[#0f1d2d]/10 backdrop-blur opacity-0 translate-y-4 transition-all duration-300 ease-out" data-reveal>
               <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#0e6f6d]">FP1</p>
               <h3 class="mt-4 text-xl font-semibold">Suivi de production</h3>
               <p class="mt-3 text-sm text-[#0f1d2d]/70">
                 Saisie des quantites produites par atelier, ordre de fabrication et periode.
               </p>
             </div>
-            <div class="glass rounded-3xl p-6 reveal-once" data-reveal>
+            <div class="rounded-3xl border border-[#0f1d2d]/10 bg-white/70 p-6 shadow-xl shadow-[#0f1d2d]/10 backdrop-blur opacity-0 translate-y-4 transition-all duration-300 ease-out" data-reveal>
               <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#0e6f6d]">FP2</p>
               <h3 class="mt-4 text-xl font-semibold">Qualite & rebuts</h3>
               <p class="mt-3 text-sm text-[#0f1d2d]/70">
                 Saisie des rebuts, ratios qualite automatiques et analyses par periode.
               </p>
             </div>
-            <div class="glass rounded-3xl p-6 reveal-once" data-reveal>
+            <div class="rounded-3xl border border-[#0f1d2d]/10 bg-white/70 p-6 shadow-xl shadow-[#0f1d2d]/10 backdrop-blur opacity-0 translate-y-4 transition-all duration-300 ease-out" data-reveal>
               <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#0e6f6d]">FP3</p>
               <h3 class="mt-4 text-xl font-semibold">Gestion des stocks</h3>
               <p class="mt-3 text-sm text-[#0f1d2d]/70">
                 Visualisation des niveaux, suivi des consommations par atelier.
               </p>
             </div>
-            <div class="glass rounded-3xl p-6 reveal-once" data-reveal>
+            <div class="rounded-3xl border border-[#0f1d2d]/10 bg-white/70 p-6 shadow-xl shadow-[#0f1d2d]/10 backdrop-blur opacity-0 translate-y-4 transition-all duration-300 ease-out" data-reveal>
               <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#0e6f6d]">FP4</p>
               <h3 class="mt-4 text-xl font-semibold">Exploitation statistique</h3>
               <p class="mt-3 text-sm text-[#0f1d2d]/70">
                 Tableaux de bord clairs et lisibles, exploitation directe sans retraitement.
               </p>
             </div>
-            <div class="glass rounded-3xl p-6 reveal-once" data-reveal>
+            <div class="rounded-3xl border border-[#0f1d2d]/10 bg-white/70 p-6 shadow-xl shadow-[#0f1d2d]/10 backdrop-blur opacity-0 translate-y-4 transition-all duration-300 ease-out" data-reveal>
               <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#0e6f6d]">FP5</p>
               <h3 class="mt-4 text-xl font-semibold">Droits & acces</h3>
               <p class="mt-3 text-sm text-[#0f1d2d]/70">
                 Profils utilisateurs, acces restreints, securisation du bureau d'etudes.
               </p>
             </div>
-            <div class="glass rounded-3xl p-6 reveal-once" data-reveal>
+            <div class="rounded-3xl border border-[#0f1d2d]/10 bg-white/70 p-6 shadow-xl shadow-[#0f1d2d]/10 backdrop-blur opacity-0 translate-y-4 transition-all duration-300 ease-out" data-reveal>
               <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#0e6f6d]">Inclus</p>
               <h3 class="mt-4 text-xl font-semibold">Perimetre clair</h3>
               <p class="mt-3 text-sm text-[#0f1d2d]/70">
@@ -296,13 +219,13 @@
             </div>
           </div>
           <div class="mt-8 grid gap-6 md:grid-cols-2">
-            <div class="rounded-3xl border border-[#0f1d2d]/10 bg-white/60 p-6 reveal-once" data-reveal>
+            <div class="rounded-3xl border border-[#0f1d2d]/10 bg-white/60 p-6 opacity-0 translate-y-4 transition-all duration-300 ease-out" data-reveal>
               <h4 class="text-sm font-semibold uppercase tracking-[0.2em] text-[#d97735]">Exclus</h4>
               <p class="mt-3 text-sm text-[#0f1d2d]/70">
                 Pas de modernisation machine, pas de refonte industrielle, pas de maintenance avancee.
               </p>
             </div>
-            <div class="rounded-3xl border border-[#0f1d2d]/10 bg-white/60 p-6 reveal-once" data-reveal>
+            <div class="rounded-3xl border border-[#0f1d2d]/10 bg-white/60 p-6 opacity-0 translate-y-4 transition-all duration-300 ease-out" data-reveal>
               <h4 class="text-sm font-semibold uppercase tracking-[0.2em] text-[#d97735]">Succes</h4>
               <p class="mt-3 text-sm text-[#0f1d2d]/70">
                 Adoption terrain, donnees fiables, statistiques rapides, accompagnement au demarrage.
@@ -313,7 +236,7 @@
 
         <section id="contraintes" class="mx-auto max-w-6xl px-6">
           <div class="grid gap-10 md:grid-cols-[1fr_0.8fr]">
-            <div class="space-y-6 reveal-once" data-reveal>
+            <div class="space-y-6 opacity-0 translate-y-4 transition-all duration-300 ease-out" data-reveal>
               <p class="text-xs font-semibold uppercase tracking-[0.4em] text-[#0e6f6d]">Contraintes</p>
               <h2 class="text-3xl font-semibold tracking-tight">Un outil adopte par tous.</h2>
               <div class="space-y-4 text-sm text-[#0f1d2d]/70">
@@ -322,7 +245,7 @@
                 <p><span class="font-semibold text-[#0f1d2d]">Humain:</span> formation obligatoire, interfaces intuitives, temps de saisie reduit.</p>
               </div>
             </div>
-            <div class="rounded-3xl bg-[#0f1d2d] p-8 text-white reveal-once" data-reveal>
+            <div class="rounded-3xl bg-[#0f1d2d] p-8 text-white opacity-0 translate-y-4 transition-all duration-300 ease-out" data-reveal>
               <p class="text-xs font-semibold uppercase tracking-[0.3em] text-white/60">Budget</p>
               <p class="mt-3 text-3xl font-semibold">100 000 EUR max</p>
               <p class="mt-4 text-sm text-white/70">
@@ -347,38 +270,38 @@
         </section>
 
         <section id="acteurs" class="mx-auto max-w-6xl px-6">
-          <div class="flex flex-wrap items-end justify-between gap-6 reveal-once" data-reveal>
+          <div class="flex flex-wrap items-end justify-between gap-6 opacity-0 translate-y-4 transition-all duration-300 ease-out" data-reveal>
             <div>
               <p class="text-xs font-semibold uppercase tracking-[0.4em] text-[#0e6f6d]">Acteurs</p>
               <h2 class="text-3xl font-semibold tracking-tight">Une equipe alignee.</h2>
             </div>
-            <p class="serif max-w-lg text-[#0f1d2d]/70">
+            <p class="max-w-lg text-[#0f1d2d]/70 font-['Spectral']">
               Direction, informatique, chefs d'atelier et bureau d'etudes travaillent ensemble pour garantir
               des donnees fiables et des decisions plus rapides.
             </p>
           </div>
           <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <div class="glass rounded-3xl p-6 reveal-once" data-reveal>
+            <div class="rounded-3xl border border-[#0f1d2d]/10 bg-white/70 p-6 shadow-xl shadow-[#0f1d2d]/10 backdrop-blur opacity-0 translate-y-4 transition-all duration-300 ease-out" data-reveal>
               <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#d97735]">Direction</p>
               <p class="mt-3 text-sm text-[#0f1d2d]/70">Pilotage et validation.</p>
             </div>
-            <div class="glass rounded-3xl p-6 reveal-once" data-reveal>
+            <div class="rounded-3xl border border-[#0f1d2d]/10 bg-white/70 p-6 shadow-xl shadow-[#0f1d2d]/10 backdrop-blur opacity-0 translate-y-4 transition-all duration-300 ease-out" data-reveal>
               <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#d97735]">Resp. informatique</p>
               <p class="mt-3 text-sm text-[#0f1d2d]/70">Referent projet.</p>
             </div>
-            <div class="glass rounded-3xl p-6 reveal-once" data-reveal>
+            <div class="rounded-3xl border border-[#0f1d2d]/10 bg-white/70 p-6 shadow-xl shadow-[#0f1d2d]/10 backdrop-blur opacity-0 translate-y-4 transition-all duration-300 ease-out" data-reveal>
               <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#d97735]">Chefs d'atelier</p>
               <p class="mt-3 text-sm text-[#0f1d2d]/70">Utilisateurs referents.</p>
             </div>
-            <div class="glass rounded-3xl p-6 reveal-once" data-reveal>
+            <div class="rounded-3xl border border-[#0f1d2d]/10 bg-white/70 p-6 shadow-xl shadow-[#0f1d2d]/10 backdrop-blur opacity-0 translate-y-4 transition-all duration-300 ease-out" data-reveal>
               <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#d97735]">Adjoints</p>
               <p class="mt-3 text-sm text-[#0f1d2d]/70">Saisie et suivi.</p>
             </div>
-            <div class="glass rounded-3xl p-6 reveal-once" data-reveal>
+            <div class="rounded-3xl border border-[#0f1d2d]/10 bg-white/70 p-6 shadow-xl shadow-[#0f1d2d]/10 backdrop-blur opacity-0 translate-y-4 transition-all duration-300 ease-out" data-reveal>
               <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#d97735]">Ouvriers</p>
               <p class="mt-3 text-sm text-[#0f1d2d]/70">Saisie operationnelle.</p>
             </div>
-            <div class="glass rounded-3xl p-6 reveal-once" data-reveal>
+            <div class="rounded-3xl border border-[#0f1d2d]/10 bg-white/70 p-6 shadow-xl shadow-[#0f1d2d]/10 backdrop-blur opacity-0 translate-y-4 transition-all duration-300 ease-out" data-reveal>
               <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#d97735]">Bureau d'etudes</p>
               <p class="mt-3 text-sm text-[#0f1d2d]/70">Fournisseur de donnees techniques.</p>
             </div>
@@ -386,7 +309,7 @@
         </section>
 
         <section id="contact" class="mx-auto max-w-6xl px-6">
-          <div class="rounded-3xl bg-[#0e6f6d] p-10 text-white md:p-14 reveal-once" data-reveal>
+          <div class="rounded-3xl bg-[#0e6f6d] p-10 text-white md:p-14 opacity-0 translate-y-4 transition-all duration-300 ease-out" data-reveal>
             <div class="grid gap-8 md:grid-cols-[1.2fr_0.8fr]">
               <div>
                 <p class="text-xs font-semibold uppercase tracking-[0.4em] text-white/70">Prochaine etape</p>
@@ -421,7 +344,7 @@
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              entry.target.classList.add("is-visible");
+              entry.target.classList.add("opacity-100", "translate-y-0");
               observer.unobserve(entry.target);
             }
           });
